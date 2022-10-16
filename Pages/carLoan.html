@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- linkear nuestro css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <title>Creditos</title>
 </head>
@@ -24,7 +24,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="../index.html">
                     <img src="https://www.cellpay.mx/assets/img/New/creditos/cp-money-cs.png" alt="" width="50"
                         height="24" class="img-fluid">
                     Inicio
@@ -36,36 +36,72 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="pages/bankLoan.html">Credito bancario</a>
+                            <a class="nav-link" aria-current="page" href="bankLoan.html">Credito bancario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/carLoan.html">Credito para auto</a>
+                            <a class="nav-link active">Credito para auto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/productos.html">Credito para casa</a>
+                            <a class="nav-link" href="productos.html">Credito para casa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <h1 class="text-center p-5">Presta - Max</h1>
-        <div class="text-center">
+        <h1 class="text-center p-5">Consigue tu nuevo carro</h1>
 
-            <p>
-                Somos una empresa que esta enfocada en proporcionar prestamos financieros de la
-                manera más facil posible, en esta pagina podras cotizar el prestamo dependiendo
-                de tus necesidades.
-            </p>
-        </div>
 
     </header>
+
+    <div class="container-fluid d-flex justify-content-center">
+        <div class="col-3 ">
+            <div class="mb-3 col-12">
+                <label for="exampleInputPassword1" class="form-label">Marca</label>
+                <select id="brandInput" class="form-select" aria-label="Default select example">
+                </select>
+            </div>
+            <div class="mb-3 col-12">
+                <label for="exampleInputPassword1" class="form-label">Modelo</label>
+                <select id="modelInput" class="form-select" aria-label="Default select example">
+                </select>
+            </div>
+            <div class="mb-3 col-12">
+                <label for="exampleInputPassword1" class="form-label">Año</label>
+                <select id="yearInput" class="form-select" aria-label="Default select example">
+                </select>
+            </div>
+            <div class="mb-3 col-12">
+                <label for="exampleInputEmail1" class="form-label">Enganche</label>
+                <input id="carLoan" type="number" class="form-control" min="1" aria-describedby="loanhelp">
+
+            </div>
+            <div class="mb-3">
+                <button id="totalButton" class="btn btn-primary btn-lg">Calcular</button>
+
+            </div>
+            
+
+
+            <!-- <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Calcular</label>
+            </div> -->
+
+        </div>
+        
+
+    </div>
+
+    <div class="mb-3 ">
+        <label id="totalLabel" class="form-label"></label>
+    </div>
 
     <!-- inicio de footer -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -104,6 +140,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/car.js"></script>
 </body>
 
 </html>

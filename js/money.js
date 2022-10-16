@@ -3,21 +3,32 @@ const months = document.getElementById('months')
 const calculateButton = document.getElementById("totalButton");
 const labelTotal = document.getElementById("totalLabel")
 calculateButton.addEventListener("click", getTotal)
+//Arreglo con los meses permitidos
+const monthsArray = [6, 8, 12, 16, 32]
+months.addEventListener("click", getMonths())
 
-//Funcion para calcular costo toal
+//Funcion para calcular costo total
 function getTotal() {
-    let total = 0
-    if (parseFloat(loan.value) <= 1000) {
-        total = getIntereses(months.value, loan.value, 1)
-    } else if (parseFloat(loan.value) <= 10000) {
-        total = getIntereses(months.value, loan.value, 2)
+console.log(months.value)
+    if (loan.value && months.value) {
+        let total = parseFloat(loan.value)
+        if (parseFloat(loan.value) <= 1000) {
+            total += getIntereses(months.value, loan.value, 1)
+        } else if (parseFloat(loan.value) <= 10000) {
+            total += getIntereses(months.value, loan.value, 2)
+        }
+        else if (parseFloat(loan.value) > 100000) {
+            total += getIntereses(months.value, loan.value, 3)
+        }
+        //debugger;
+        total += getIVA()
+        if (labelTotal.innerHTML.includes("El total a pagar del prestamo es")) {
+            labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
+        }
+        else {
+            labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
+        }
     }
-    else if (parseFloat(loan.value) > 100000) {
-        total = getIntereses(months.value, loan.value, 3)
-    }
-    debugger;
-    total += getIVA()
-    labelTotal.innerText = `El total del prestamo es:$ ${total}`
 }
 
 //Funcion para calcular el IVA
@@ -80,4 +91,12 @@ function getIntereses(months, loan, op) {
         }
 
 
+}
+
+function getMonths() {
+    html = "<option selected>Ingrese los meses</option>"
+    monthsArray.forEach(element => {
+        html += `<option value="${element}">${element}</option>`
+    });
+    months.innerHTML = html
 }
