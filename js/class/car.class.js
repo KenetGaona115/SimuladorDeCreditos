@@ -1,5 +1,5 @@
 
-export class Carro {
+class Carro {
 
     constructor(brand, model, year) {
         this.brand = brand;

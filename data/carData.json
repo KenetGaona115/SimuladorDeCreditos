@@ -1,0 +1,205 @@
+{
+    "brands" :[
+        {
+            "id": 1,
+            "name": "BMW",
+            "models": [
+                "Serie 1",
+                "Serie 1 128ti",
+                "Serie 2 Coupé",
+                "Serie 2 Gran Coupé",
+                "Serie 3",
+                "Serie 3 Híbrnameo",
+                "Serie 4 Coupé",
+                "Serie 4 Gran Coupé",
+                "Serie 4 Convertible",
+                "Serie i4 ELÉCTRICO",
+                "Serie 5 Sedán",
+                "Serie 7 Sedán",
+                "Serie 8 Coupé",
+                "BMW X1",
+                "BMW X3",
+                "BMW X5",
+                "BMW X7",
+                "BMW Z4 Roadster",
+                "BMW M135i xDrive"
+            ]
+        },
+        {
+            "id": 2,
+            "name": "CHEVROLET",
+            "models": [
+                "Aveo",
+                "Onix",
+                "Cavalier",
+                "Groove",
+                "Tracker",
+                "Captiva",
+                "Blazer",
+                "Traverse",
+                "Tahoe",
+                "Suburban",
+                "S-10 Max",
+                "Colorado",
+                "Silverdado",
+                "Cheyene",
+                "Camaro",
+                "Corvette"
+            ]
+        },
+        {
+            "id": 3,
+            "name": "CHRYSLER",
+            "models": [
+                "PACIFICA",
+                "CHRYSLER 300",
+                "CHRYSLER 300-C",
+                "CHRYSLER Airflow Graphite",
+                "CHRYSLER Town & Country"
+            ]
+        },
+        {
+            "id": 4,
+            "name": "FORD",
+            "models": [
+                "Territory",
+                "Bronco",
+                "Edge",
+                "Explorer",
+                "Expedition",
+                "Mustang",
+                "Ranger",
+                "Maverick",
+                "Lobo",
+                "F-150",
+                "Super Duty F-250",
+                "Transit",
+                "Raptor"
+            ]
+        },
+        {
+            "id": 5,
+            "name": "HONDA",
+            "models": [
+                "CITY",
+                "CIVIC",
+                "INSIGHT",
+                "ACCORD",
+                "BR-V",
+                "HR-V",
+                "CR-V",
+                "PILOT",
+                "ODYSSEY"
+            ]
+        },
+        {
+            "id": 6,
+            "name": "HYUNDAI",
+            "models": [
+                "GRAND I10",
+                "ACCENT SD",
+                "ACCENT HB⁠",
+                "ELANTRA",
+                "CRETA",
+                "CRETA GRAND",
+                "TUCSON",
+                "SANTA FE",
+                "PALISADE",
+                "ELANTRA HEV",
+                "TUCSON HEV"
+            ]
+        },
+        {
+            "id": 7,
+            "name": "KIA",
+            "models": [
+                "Rio Sedán",
+                "Rio Hatchback",
+                "Forte Sedán",
+                "Forte Hatchback",
+                "Stinger",
+                "Soul",
+                "Seltos",
+                "Niro",
+                "Sorento"
+            ]
+        },
+        {
+            "id": 8,
+            "name": "MAZDA",
+            "models": [
+                "MAZDA2 SEDÁN",
+                "MAZDA2 HATCHBACK",
+                "MAZDA3 SEDÁN",
+                "MAZDA3 HATCHBACK",
+                "MAZDA CX-3",
+                "MAZDA CX-30",
+                "MAZDA CX-5",
+                "MAZDA CX-9",
+                "MAZDA MX-5",
+                "MAZDA MX-5 RF"
+            ]
+        },
+        {
+            "id": 9,
+            "name": "MERCEDES-BENZ",
+            "models": [
+                "Clase A Sédan",
+                "Clase C Sédan",
+                "Clase E Sédan",
+                "Clase S Sédan",
+                "EQA SUV",
+                "EQB SUV",
+                "EQC SUV",
+                "GLA SUV",
+                "GLB SUV",
+                "GLC SUV",
+                "GLE SUV",
+                "CLA Coupé",
+                "CLS Coupé",
+                "Clase E Coupé",
+                "Sprinter"
+            ]
+        },
+        {
+            "id": 10,
+            "name": "NISSAN",
+            "models": [
+                "Versa",
+                "GT-R",
+                "March",
+                "Altima",
+                "370Z",
+                "V-Drive",
+                "Sentra",
+                "X-trail"
+            ]
+        },
+        {
+            "id": 11,
+            "name": "TOYOTA",
+            "models": [
+                "Prius",
+                "Corolla HV",
+                "Camry HV",
+                "Rav4 HV",
+                "Siena"
+            ]
+        },
+        {
+            "id": 12,
+            "name": "VOLKSWAGEN",
+            "models": [
+                "Virtus",
+                "Jetta",
+                "Saveiro",
+                "T-Cross",
+                "Nivus",
+                "Taos",
+                "Tiguan",
+                "Teramont",
+                "Cross Sport"
+            ]
+        }
+    ]
+}

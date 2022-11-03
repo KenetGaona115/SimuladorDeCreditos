@@ -1,15 +1,18 @@
+
 const loan = document.getElementById('loan')
 const months = document.getElementById('months')
 const calculateButton = document.getElementById("totalButton");
 const labelTotal = document.getElementById("totalLabel")
 calculateButton.addEventListener("click", getTotal)
+const solButton = document.getElementById('solButton')
+solButton.addEventListener("click", displaySol)
+solButton.style.visibility = 'hidden';
 //Arreglo con los meses permitidos
 const monthsArray = [6, 8, 12, 16, 32]
 months.addEventListener("click", getMonths())
 
 //Funcion para calcular costo total
 function getTotal() {
-console.log(months.value)
     if (loan.value && months.value) {
         let total = parseFloat(loan.value)
         if (parseFloat(loan.value) <= 1000) {
@@ -29,6 +32,7 @@ console.log(months.value)
             labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
         }
     }
+    solButton.style.visibility = 'visible';
 }
 
 //Funcion para calcular el IVA
@@ -94,9 +98,19 @@ function getIntereses(months, loan, op) {
 }
 
 function getMonths() {
-    html = "<option selected>Ingrese los meses</option>"
+   let html = "<option selected>Ingrese los meses</option>"
     monthsArray.forEach(element => {
         html += `<option value="${element}">${element}</option>`
     });
     months.innerHTML = html
+}
+
+function displaySol() {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Solicitud enviada',
+        showConfirmButton: false,
+        timer: 1500
+      })
 }
