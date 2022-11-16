@@ -13,8 +13,9 @@ months.addEventListener("click", getMonths())
 
 //Funcion para calcular costo total
 function getTotal() {
+    let total = 0
     if (loan.value && months.value) {
-        let total = parseFloat(loan.value)
+        total = parseFloat(loan.value)
         if (parseFloat(loan.value) <= 1000) {
             total += getIntereses(months.value, loan.value, 1)
         } else if (parseFloat(loan.value) <= 10000) {
@@ -24,15 +25,21 @@ function getTotal() {
             total += getIntereses(months.value, loan.value, 3)
         }
         //debugger;
-        total += getIVA()
-        if (labelTotal.innerHTML.includes("El total a pagar del prestamo es")) {
-            labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
-        }
-        else {
-            labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
+        if (total != 0) {
+            total += getIVA()
+            if (labelTotal.innerHTML.includes("El total a pagar del prestamo es")) {
+                labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
+            }
+            else {
+                labelTotal.innerHTML = `El total a pagar del prestamo es:$ ${total}`
+            }
+            solButton.style.visibility = 'visible';
         }
     }
-    solButton.style.visibility = 'visible';
+    else {
+        displayError()
+    }
+
 }
 
 //Funcion para calcular el IVA
@@ -98,7 +105,7 @@ function getIntereses(months, loan, op) {
 }
 
 function getMonths() {
-   let html = "<option selected>Ingrese los meses</option>"
+    let html = "<option selected>Ingrese los meses</option>"
     monthsArray.forEach(element => {
         html += `<option value="${element}">${element}</option>`
     });
@@ -112,5 +119,13 @@ function displaySol() {
         title: 'Solicitud enviada',
         showConfirmButton: false,
         timer: 1500
+    })
+}
+
+function displayError() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se han llenado los campos correctamente'
       })
 }

@@ -13,7 +13,7 @@ body {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 80%;
 }
 
 a {
@@ -37,11 +37,6 @@ nav .navbar-brand {
     font-size: 2rem;
 }
 
-.contenedorDesc {
-    width: 70%;
-    border: 1px solid;
-    margin: auto;
-}
 
 footer {
     width: 100%;

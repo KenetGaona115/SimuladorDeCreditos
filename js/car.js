@@ -9,7 +9,6 @@ await response.json().then(data => {
     data.brands.forEach(element => {
         brandArray.push(new Brand(element.id, element.name, element.models))
     });
-    console.log(brandArray)
 })
 
 const yearArray = [
@@ -48,6 +47,10 @@ const carLoan = document.getElementById('carLoan')
 const labelTotal = document.getElementById('totalLabel')
 const totalButton = document.getElementById('totalButton')
 totalButton.addEventListener('click', getTotalCarLoan)
+const solButton = document.getElementById('solButton')
+solButton.addEventListener("click", displaySol)
+solButton.style.visibility = 'hidden';
+
 
 function getModelsArray() {
     switch (brandInput.value) {
@@ -109,7 +112,29 @@ function getModels() {
 }
 
 function getTotalCarLoan() {
-    carro = new Carro(brandInput.value, modelInput.value, yearInput.value);
-    console.log(carro)
-    labelTotal.innerHTML = `El maximo del prestamo es:$ ${(carro.getMaxLoad() * carLoan.value).toFixed(2)}`
+    if (brandInput.value && modelInput.value && yearInput.value && carLoan.value) {
+        carro = new Carro(brandInput.value, modelInput.value, yearInput.value);
+        labelTotal.innerHTML = `El maximo del prestamo es:$ ${(carro.getMaxLoad() * carLoan.value).toFixed(2)}`
+        solButton.style.visibility = 'visible';
+    } else {
+        displayError()
+    }
+}
+
+function displaySol() {
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Solicitud enviada',
+        showConfirmButton: false,
+        timer: 1500
+    })
+}
+
+function displayError() {
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'No se han llenado los campos correctamente'
+    })
 }

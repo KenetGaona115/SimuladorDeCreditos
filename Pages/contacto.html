@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description" content="Informacion sobre Rammstein y venta de productos oficiales">
-
     <link rel="shortcut icon" href="https://cigconsultores.mx/wp-content/uploads/2021/04/prestamos.png">
-
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- linkear nuestro css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" defer src="../js/car.js"></script>
 
     <title>Creditos</title>
 </head>
@@ -23,7 +22,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-transparent">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="../index.html">
                     <img src="https://www.cellpay.mx/assets/img/New/creditos/cp-money-cs.png" alt="" width="50"
                         height="24" class="img-fluid">
                     Inicio
@@ -35,42 +34,64 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="pages/bankLoan.html">Credito bancario</a>
+                            <a class="nav-link" aria-current="page" href="bankLoan.html">Credito bancario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/carLoan.html">Credito para auto</a>
+                            <a class="nav-link" href="carLoan.html">Credito para auto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <h1 class="text-center p-5">Presta - Max</h1>
-        <div class="text-center">
+        <h1 class="text-center p-5">Contacto</h1>
 
-            <p>
-                Somos una empresa que esta enfocada en proporcionar prestamos financieros de la
-                manera más facil posible, en esta pagina podras cotizar el prestamo dependiendo
-                de tus necesidades.
-            </p>
-        </div>
 
     </header>
+
     <div class="container">
-        <h2>Tenemos la mejor taza del mercado</h2>
-    </div>
-    <div class="container pb-5">
-        <iframe class="text-center" width="100%wh" height="400" src="https://www.youtube.com/embed/IB_oERCg9mI"
-            title="Guía de registro para préstamos personales 2021" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <div class="row text-center">
+            <h3>En presta Max usted es lo más importante</h3>
+        </div>
+        <br>
+        <div class="row text-center">
+
+            <h3>A continuacion le presentamos las opciones de contacto</h3>
+        </div>
     </div>
 
-    
+    <div class="container text-center pt-5">
+        <div class="row justify-content-around pb-5">
+            <div class="mr-3 col-4">
+                <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
+                <input type="email" class="form-control" id="emailIn" placeholder="correo_ejemplo@example.com">
+            </div>
+            <div class="ml-3 col-6">
+                <label for="exampleFormControlTextarea1" class="form-label">Comentarios</label>
+                <textarea class="form-control" id="comenIn" rows="5"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" id="solButton">Enviar solicitud</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container d-felx pt-5">
+        <h3>Solicitar informacion via WhatsApp</h3>
+        <button type="button" class="btn btn-outline-success" id="whatButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp"
+                viewBox="0 0 16 16">
+                <path
+                    d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
+            </svg>
+        </button>
+    </div>
 
     <!-- inicio de footer -->
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -109,6 +130,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/contact.js"></script>
+
 </body>
 
 </html>
